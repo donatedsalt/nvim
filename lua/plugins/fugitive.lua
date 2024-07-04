@@ -2,6 +2,6 @@
 return {
 	'tpope/vim-fugitive',
 	config = function()
-		vim.keymap.set('n', '<leader>g', vim.cmd.G, { desc = '[G]it Fugitive' })
+		vim.keymap.set('n', '<leader>G', vim.cmd.G, { desc = '[G]it Fugitive' })
 	end,
 }
