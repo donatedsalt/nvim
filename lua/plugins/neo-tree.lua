@@ -10,7 +10,6 @@ return { -- Neo-tree is a Neovim plugin to browse the file system
 	cmd = 'Neotree',
 	keys = {
 		{ '\\', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
-		{ '<leader>g', ':Neotree float git_status<CR>', { desc = '[G]it status window' } },
 	},
 	opts = {
 		filesystem = {
@@ -20,5 +19,9 @@ return { -- Neo-tree is a Neovim plugin to browse the file system
 				},
 			},
 		},
+		source_selector = {
+			winbar = true,
+			statusline = false
+		}
 	},
 }

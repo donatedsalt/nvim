@@ -26,7 +26,26 @@ return { -- Autoformat
 			javascript = { { 'prettierd', 'prettier' } },
 			html = { { 'prettierd', 'prettier' } },
 			css = { { 'prettierd', 'prettier' } },
-			['*'] = { 'codespell' },
+			['*'] = { 'injected', 'codespell'},
+			["_"] = { "trim_whitespace" },
 		},
 	},
+	config = function()
+		require('conform').setup {
+			formatters = {
+				yamlfix = {
+					command = 'local/path/yamlfix',
+					env = {
+						YAMLFIX_SEQUENCE_STYLE = 'block_style',
+					},
+				},
+				prettierd = {
+					command = '--use-tabs --single-quote --print-width 120',
+				},
+				prettier = {
+					command = '--use-tabs --single-quote --print-width 120',
+				}
+			},
+		}
+	end,
 }

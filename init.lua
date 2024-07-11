@@ -95,6 +95,8 @@ vim.keymap.set('n', '<C-b>', '<C-b>zz', { desc = 'Move whole page [B]ackword' })
 vim.keymap.set('n', 'n', 'nzzzv', { desc = 'find next' })
 vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'find previous' })
 
+vim.keymap.set('i', '<C-c>', '<Esc>', {desc = 'Escape'})
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
